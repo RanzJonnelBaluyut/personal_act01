@@ -94,12 +94,12 @@ body{
 
         <p class="lyrics">
             
-<iframe src="song.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
           
+            <iframe src="song.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
             
-            <audio autoplay loop id="playAudio"> 
-                <source src="song.mp3">
-            </audio>
+<audio id="player" autoplay loop>
+    <source src="song.mp3" type="audio/mp3">
+</audio>
             
 <br> We're no strangers to love<br>
 You know the rules and so do I<br>
@@ -168,16 +168,5 @@ Never gonna say goodbye<br>
 
 </body>
     
-    <script>
- var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    
-  if (!isChrome){
-      $('#iframeAudio').remove()
-  }
-  else {
-      $('#playAudio').remove()
-  }
-        
- </script>  
 
 </html>
